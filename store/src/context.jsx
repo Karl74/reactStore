@@ -5,15 +5,15 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
 	state= {
-		product:storeProducts,
+		products:storeProducts,
 		detailProduct:detailProduct
 	}
 
+	 const message="you are awesome"
+
 	render(){
 		return (
-			<ProductContext.Provider value={{
-
-			}}>
+			<ProductContext.Provider value={this.message}>
 				{this.props.children}
 			</ProductContext.Provider>
 			)
@@ -23,4 +23,4 @@ class ProductProvider extends Component {
 const ProductConsumer = ProductContext.Consumer;
 
 export { ProductProvider, ProductConsumer};
-1:42
+// 1:42
