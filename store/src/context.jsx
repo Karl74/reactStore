@@ -4,16 +4,24 @@ import {storeProducts, detailProduct} from "./data"
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
-	state= {
+	state = {
 		products:storeProducts,
 		detailProduct:detailProduct
 	}
-
-	 const message="you are awesome"
-
+	handleDetail = ()=>{
+		console.log("hello from detail");
+	}
+	addToCart = ()=>{
+		console.log("hello from cart")	
+	}
+		
 	render(){
 		return (
-			<ProductContext.Provider value={this.message}>
+			<ProductContext.Provider value={{
+				...this.state,
+				handleDetail: this.handleDetail, 
+				addToCart: this.addToCart
+			}}>
 				{this.props.children}
 			</ProductContext.Provider>
 			)
