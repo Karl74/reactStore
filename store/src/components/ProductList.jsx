@@ -12,7 +12,6 @@ export default class ProductList extends Component {
 					<div className="container">
 						<Title name="our" title="product"/>
 						<div className="row">
-
 							<ProductConsumer>
 								{value=>{
 									return value.products.map(product=>
@@ -20,7 +19,6 @@ export default class ProductList extends Component {
 												  product={product}/>
 									)
 								}}
-
 							</ProductConsumer>
 						</div>
 					</div>
