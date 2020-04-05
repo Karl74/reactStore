@@ -14,7 +14,7 @@ export default class Details extends Component {
 						<div className="container py-5">
 							{/* {title} */}
 							<div className="row">
-								<div className="col-10 mx-auto text-center text-slanted text-blue my-5">
+								<div className="col-9 mx-auto text-center text-slanted text-blue my-5">
 									<h1>{title}</h1>
 								</div>
 							</div>
@@ -22,12 +22,12 @@ export default class Details extends Component {
 
 							{/* {product info} */}
 							<div className="row">
-								<div className="col-10 mx-auto col-md-6 col my-3">
+								<div className="col-9 mx-auto col-md-6 col my-3">
 									<img src={img} className="img-fluid" alt="product"/>
 								</div>
 
 							{/* {product info} */}
-								<div className="col-10 mx-auto col-md-6 col my-3 text-capitalize">
+								<div className="col-9 mx-auto col-md-6 col my-3 text-capitalize">
 									<h2>model{title}</h2>
 									<h4 className="text-title text-upper-case text-muted mt-3 mb-2" >
 										Made by: <span className="text-uppercase">
@@ -52,7 +52,9 @@ export default class Details extends Component {
 											</ButtonContainer>
 										</Link>
 
-										<ButtonContainer disable={inCart ? true : false}
+										<ButtonContainer 
+										cart 
+										disable={inCart ? true : false}
 										onClick={()=>{
 											value.addToCart(id)
 										}}>
@@ -73,4 +75,3 @@ export default class Details extends Component {
 		)
 	}
 }
-// 3:07
